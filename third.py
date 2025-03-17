@@ -18,7 +18,7 @@ def formatted_numbers(phone_number):
 
     # додаємо "+38"
     if not re.match(r"^\+?380", clean_number):
-        clean_number = "+38" + clean_number.lstrip("0")  # Прибираємо зайві "0" на початку
+        clean_number = "+38" + clean_number.lstrip("0")  
 
     return clean_number
 

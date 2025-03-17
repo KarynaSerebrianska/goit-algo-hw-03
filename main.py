@@ -13,6 +13,6 @@ def get_days_from_today(date_string):
         return "Невірний формат дати! Використовуйте 'РРРР-ММ-ДД'"
 
 # Приклади роботи:
-print(get_days_from_today("2021-10-09"))  # Має вивести кількість днів
-print(get_days_from_today("2030-01-01"))  # Від'ємне число (дата в майбутньому)
-print(get_days_from_today("10-09-2021"))  # Помилка формату
+print(get_days_from_today("2021-10-09"))  
+print(get_days_from_today("2030-01-01"))  
+print(get_days_from_today("10-09-2021"))  

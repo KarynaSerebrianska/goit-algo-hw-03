@@ -28,6 +28,7 @@ def normalize_phone(phone_number):
     if clean_number.startswith("0"):
         return "+380" + clean_number.lstrip("0")
 
+    #все ок
     return clean_number
 
 sanitized_numbers = [normalize_phone(num) for num in raw_numbers]

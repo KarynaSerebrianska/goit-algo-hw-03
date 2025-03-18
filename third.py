@@ -12,16 +12,19 @@ raw_numbers = [
     "38050 111 22 11   ",
 ]
 
-def formatted_numbers(phone_number):
+def normalize_phone(phone_number):
     # Видаляємо всі зайві символи
     clean_number = re.sub(r"[^\d+]", "", phone_number)
 
     # додаємо "+38"
     if not re.match(r"^\+?380", clean_number):
-        clean_number = "+38" + clean_number.lstrip("0")  
+        clean_number = "+380" + clean_number.lstrip("0")  
 
     return clean_number
 
-sanitized_numbers = [formatted_numbers(num) for num in raw_numbers]
+sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
 
 print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)
+
+
+['+380671234567', '+380952345678', '+380441234567', '380501234567', '+380501233234', '+380503451234', '+380508889900', '380501112222', '380501112211']
